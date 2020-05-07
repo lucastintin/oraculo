@@ -12,11 +12,11 @@
     <header>
         <%- include('./../partials/header') -%>
     </header>
-    <div class="container">
-        <h3>A resposta correta de "<%= pergunta.descricao %>", é:</h3>
+    <div class="container-me text-center">
+        <h4>A resposta correta de "<%= pergunta.descricao %>", é:</h4>
         <br/>
         <input 
-            class="btn btn-primary btn-lg" 
+            class="btn btn-primary btn-lg btn-block" 
             type="button" 
             value="<%= pergunta.opcoes[0].texto %>" 
             <%if (pergunta.opcoes[0].isCorrect == false) { %>
@@ -25,7 +25,7 @@
         />
         <br/><br/>
         <input 
-            class="btn btn-primary btn-lg" 
+            class="btn btn-primary btn-lg btn-block" 
             type="button" 
             value="<%= pergunta.opcoes[1].texto %>" 
             <%if (pergunta.opcoes[1].isCorrect == false) { %>
@@ -34,7 +34,7 @@
         />
         <br/><br/>
         <input 
-            class="btn btn-primary btn-lg" 
+            class="btn btn-primary btn-lg btn-block" 
             type="button" 
             value="<%= pergunta.opcoes[2].texto %>" 
             <%if (pergunta.opcoes[2].isCorrect == false) { %>
@@ -43,7 +43,7 @@
         />
         <br/><br/>
         <input 
-            class="btn btn-primary btn-lg" 
+            class="btn btn-primary btn-lg btn-block" 
             type="button" 
             value="<%= pergunta.opcoes[3].texto %>" 
             <%if (pergunta.opcoes[3].isCorrect == false) { %>
@@ -52,7 +52,7 @@
         />
         <br/><br/><br/><br/>
         <input 
-            class="btn btn-primary btn-lg" 
+            class="btn btn-primary btn-lg btn-block" 
             type="button" 
             value="Pr&oacute;xima pergunta" 
             onclick="proximaPergunta()"
