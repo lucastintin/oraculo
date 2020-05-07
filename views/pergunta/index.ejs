@@ -10,6 +10,9 @@
             //console.log('clique ' +  pergId);
             window.location.href = "/pergunta/check/"+pergId;
         }
+        function proximaPergunta(){
+            window.location.href = "/pergunta";
+        }
     </script>
     <header>
         <%- include('./../partials/header') -%>
@@ -44,6 +47,13 @@
             type="button" 
             value="<%= pergunta.opcoes[3].texto %>" 
             onclick="verificarResposta()" 
+        />
+        <br/><br/><br/><br/>
+        <input 
+            class="btn btn-primary btn-lg btn-block" 
+            type="button" 
+            value="Pular pergunta" 
+            onclick="proximaPergunta()"
         />
     </div>
     <footer>
